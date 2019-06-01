@@ -12,10 +12,10 @@ function CuboidMaker(attr) {
   this.height = attr.height;
 }
 
-CuboidMaker.prototype.volume = function () {
+CuboidMaker.prototype.volume = () => {
   return this.length * this.width * this.height;
 }
-CuboidMaker.prototype.surfaceArea = function () {
+CuboidMaker.prototype.surfaceArea = () => {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
