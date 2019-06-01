@@ -14,7 +14,7 @@ const tyrannosaurus = {
   weight: "7000kg",
   length: "12m",
   period: "Late Cretaceous",
-  roar: function () {
+  roar: () => {
     return "RAWERSRARARWERSARARARRRR!";
   }
 }
@@ -77,7 +77,7 @@ const graduates = [{ "id": 1, "first_name": "Cynde", "university": "Missouri Sou
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-graduates.forEach(function (item) {
+graduates.forEach((item) => {
   universities.push(item.university);
 });
 universities.sort();
@@ -89,17 +89,17 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = graduates.map(function (item) {
+const contactInfo = graduates.map((item) => {
   return `${item.first_name} ${item.email}`
 });
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = graduates.filter(function (item) {
+const uni = graduates.filter((item) => {
   let newUni = item.university.toUpperCase();
   return newUni.includes("UNI");
-}).map(function (item) {
+}).map((item) => {
   return item.university;
 });
 console.log(uni);
@@ -127,7 +127,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-zooAnimals.forEach(function (item) {
+zooAnimals.forEach((item) => {
   animalNames.push(`Name: ${item.animal_name} Scientific Name: ${item.scientific_name}.`)
 });
 console.log(animalNames);
@@ -138,7 +138,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = zooAnimals.map(function (item) {
+const lowerCase = zooAnimals.map((item) => {
   return item.animal_name.toLowerCase();
 });
 console.log(lowerCase);
@@ -148,7 +148,7 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = zooAnimals.filter(function (item) {
+const largerPopulation = zooAnimals.filter((item) => {
   return item.population < 5;
 });
 console.log(largerPopulation);
